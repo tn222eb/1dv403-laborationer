@@ -4,11 +4,34 @@ window.onload = function(){
 
 	
 	var birthday = function(date){
-		
 
+        var now;
+        var splitBirthDay= [];
+        var birthday;
+        var msLeft;
+        var daysLeft;
 
-			// Din kod här.
+        // Din kod här.
+   
+        if(!date.match(/^(\d{4})([\/-])(\d{1,2})\2(\d{1,2})$/)){
+          throw {message: "Fel! Ange födelsedagen på formatet ÅÅÅÅ-MM-DD."};
+        }
+        
+        now = new Date();
+        
+        splitBirthDay = date.split("-");
+        console.log(splitBirthDay);
+        
+        birthday = new Date(now.getFullYear(), splitBirthDay[1] - 1, splitBirthDay[2]);
+        
+        if(birthday.getTime() < now.getTime() && birthday.getDate() != now.getDate()){
+            birthday.setFullYear(now.getFullYear()+1);
+        } 
+        
+        msLeft = birthday.getTime() - now.getTime();
+        daysLeft = Math.floor(((((msLeft /1000) /60) / 60) / 24)+1);
 
+        return daysLeft;
 
 
 
@@ -28,7 +51,7 @@ window.onload = function(){
 		p.classList.remove( "error");
 
 		try {
-			var answer = birthday(input.value) // Läser in texten från textrutan och skickar till funktionen "convertString"
+			var answer = birthday(input.value); // Läser in texten från textrutan och skickar till funktionen "convertString"
 			var message;
 			switch (answer){
 				case 0: message = "Grattis på födelsedagen!";
