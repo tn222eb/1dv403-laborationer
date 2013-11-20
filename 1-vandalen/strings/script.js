@@ -2,12 +2,38 @@
 
 window.onload = function(){
 
-	// I denna funktion ska du skriva koden för att hantera "spelet"
-	var convertString = function(str){
-		// Plats för förändring.		
-		// Returnera den konverterade strängen.
-		// Vid fel, kasta ett undantag med ett meddelande till användaren. 
-	
+// I denna funktion ska du skriva koden för att hantera "spelet"
+var convertString = function(str){
+
+if (str === "" || !isNaN(str)) // Om den är tom eller är ett nummer så kommer fel-meddelande att skrivas ut
+{
+    throw {message: "Något måste skrivas för omvandling!"};
+}
+
+var text = "";         // Variabel för texten
+var pattern = /a/ig;  // Variabel som innehåller alla A eller a
+
+for (var i = 0; i < str.length; i++)  // For-loop som ska skriva ut allt
+{
+if (str.charAt(i) === str.charAt(i).toUpperCase())     // If sats som kollar ifall den är gemener
+{
+str = str.replace(pattern, "#");                      //  Ersätter alla A eller a med # 
+text += str.charAt(i).toLowerCase();                 //   och ifall det är så skriver ut texten i versaler
+}
+else                                                //    Annars
+{
+str = str.replace(pattern, "#");                   //     Ersätter alla A eller a med #
+text += str.charAt(i).toUpperCase();              //      Skriver ut texten i gemener
+}
+
+}
+
+
+
+// Plats för förändring.		
+// Returnera den konverterade strängen.
+return text;
+// Vid fel, kasta ett undantag med ett meddelande till användaren. 
 
 
 
