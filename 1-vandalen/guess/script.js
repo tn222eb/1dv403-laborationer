@@ -17,6 +17,12 @@ guesses++; // Ökar med ett varje gång man gör ett försök.
 		
 
 		// Returnera exempelvis:
+		if(isNaN(number)||number === "")
+        {
+        alert("You must guess something. It cannot be empty or a string!");
+        }
+        else
+        {
         // [false, "Talet är utanför intervallet 0 - 100"]	
 		if ( number > 100 || number < 0)
 		alert("The guessed number is outside the range of 0 - 100");
@@ -43,6 +49,7 @@ guesses++; // Ökar med ett varje gång man gör ett försök.
 		alert("The secret number is a number and not a string");
 		}
 		}
+        }
 	};
 	
 	// Kod för att hantera utskrift och inmatning. Denna ska du inte behöva förändra
