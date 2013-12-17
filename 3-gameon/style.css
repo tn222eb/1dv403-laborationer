@@ -1,9 +1,40 @@
 body
 {
-background-color: #bfb1b1;
+background-color: #bfb1b1; 
 }
 
 h1
 {
-font-family: 'Lilita One', cursive;    
+font-family: 'Gloria Hallelujah', cursive;    
+}
+
+#container
+{
+margin: auto;
+height: 100px;
+width: 227px;
+}
+
+img
+{
+background-color:white;
+padding: 6px 6px 6px 6px;
+}
+
+img:hover
+{
+-ms-transform: scale(1.1);    
+-webkit-transform: scale(1.1);
+-moz-transform: scale(1.1);
+-o-transform: scale(1.1);
+transform: scale(1.1);
+}
+
+a:focus
+{
+-ms-transform: scale(1.1);    
+-webkit-transform: scale(1.1);
+-moz-transform: scale(1.1);
+-o-transform: scale(1.1);
+transform: scale(1.1);
 }

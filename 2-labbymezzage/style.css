@@ -42,13 +42,6 @@ main
     height: auto;
 }
 
-footer p
-{
-    font-family: 'Trade Winds', cursive;
-    margin-top: 130px;
-    text-align: center;
-}
-
 main p
 {
     margin-left: 40px;

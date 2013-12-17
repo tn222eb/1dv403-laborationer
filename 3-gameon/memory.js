@@ -20,6 +20,7 @@ init:function(){
 Memory.randomArray = RandomGenerator.getPictureArray(columns, rows);
         
 // Anropar generateTable för att rita ut tabellen
+
 Memory.generateTable();
 },
 
@@ -86,7 +87,7 @@ if (Memory.links.length === 1 || Memory.links.length === 2)
 this.getElementsByTagName("img")[0].setAttribute("src", "pics/" + Memory.randomArray[t] + ".png");
 }
 
-// Ifall bilderna inte stämmer överens, anropas checkTiles funktionen efter en sekund
+// Efter du tryckt på två bilder så anropas checkTiles funktionen efter 1 sekund som kollar om de är lika
 if (Memory.links.length === 2)
 {
 setTimeout(function(){

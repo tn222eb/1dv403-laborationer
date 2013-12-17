@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript - Validering</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<div id="container">
+
+<main>
+
+<header>
+</header>
+
+<form id ="form" action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbteknik/process_form.php" method="post">
+
+<fieldset id="fieldset">
+
+<label for="firstname">Förnamn:</label>
+<input type="text" name="Förnamn" id="firstname"/>
+<span id="first"></span>
+<br/>
+
+<label for="lastname">Efternamn:</label>
+<input type="text" name="Efternamn" id="lastname"/>
+<span id="last"></span>
+<br/>
+
+
+<label for="postalcode">Postnummer:</label>
+<input type="text" name="Postnummer" id="postalcode"/> 
+<span id="postal"></span>
+<br/>
+
+<label for="email">E-post:</label>
+<input type="email" name="E-post" id="email"/>
+<span id="email"></span>
+<br/>
+
+<label for="price">Prismodell:</label>
+<select id="price" name="Prismodell">
+<option>Låg</option>
+<option>Mellan</option>
+<option>Hög</option>
+</select> 
+<br/>
+
+<input type="submit" id="button" value="Genomför köp" />
+
+</fieldset>
+
+</form>
+
+</main>
+
+</div>
+<script type="text/javascript" src="validering.js"></script>
+</body>
+</html>

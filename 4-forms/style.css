@@ -1,0 +1,82 @@
+body
+{
+background-color: #bfb1b1; 
+}
+
+legend
+{
+color:white;
+}
+
+label
+{
+    color:white;
+}
+
+main form 
+{
+    width: 500px;
+}
+
+main form label 
+{
+    width: 140px;
+    text-align: right;
+    display: block;
+    float: left;
+    padding-right:10px;
+    clear: left;
+    font-size:105%
+}
+
+fieldset
+{
+    width: 500px;
+    border: 2px solid white;
+    margin: 0px 500px 0px;
+}
+ 
+#button
+{
+border-radius: 15px;    
+border: none;    
+padding: 5px;  
+background-color: orange;    
+color: white;    
+float: right;
+font-weight: bold;
+}
+
+header
+{
+margin-left: 410px;
+height: 132px;
+width: 692px;
+background-image: url(validering.png);
+background-repeat: no-repeat;
+margin-bottom: 30px;
+}
+
+input.error
+{
+border: 1px solid red;
+}
+
+input.valid
+{
+border: 1px solid green;
+}
+
+input
+{
+    margin-bottom: 3px;
+    padding: 5px;
+}
+
+div.errormessage, div.errormessage2
+{
+color: red;
+position: absolute;
+margin-left: 310px;
+margin-top: -27px;
+}
