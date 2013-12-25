@@ -1,0 +1,21 @@
+#container
+{
+background: url("pics/background.png") repeat scroll 0% 0% transparent;
+width: 1024px;
+height: 560px;
+background-position: center;
+margin: 20px auto;
+}
+
+body
+{
+background-color: rgb(51, 51, 51);    
+}
+
+.iconImage
+{
+float: left;
+transform: scale(0.7);
+margin-top: 430px;
+}
+
