@@ -1,6 +1,6 @@
 "use strict";
 
-var PersonalWebDesktop = {
+var personalWebDesktop = {
 
 init: function () {
 
@@ -9,7 +9,7 @@ var div = document.createElement("div");
 div.className = "icon";
 
 var image = document.createElement("img");
-image.setAttribute("src", "http://icons.iconarchive.com/icons/iconshock/cms/128/gallery-icon.png");
+image.setAttribute("src", "pics/iconImage.png");
 image.className = "iconImage";
 
 var a = document.createElement("a");
@@ -22,10 +22,37 @@ icon.appendChild(div);
 a.onclick = function () {
 
 
-var main = document.getElementById("main");
+var container = document.getElementById("container");
 
-var div = document.createElement("div");
-div.className = "window";
+var windowDiv = document.createElement("div");
+windowDiv.className = "window";
+
+container.appendChild(windowDiv);
+
+var headerDiv = document.createElement("div");
+headerDiv.className = "headerDiv";
+
+var closeImage =  document.createElement("img");
+closeImage.setAttribute("src", "#");
+
+var closeImageLink = document.createElement("a");
+closeImageLink.setAttribute("href", "#");
+
+var headerIcon = document.createElement("img");
+headerIcon.className = "headerIcon";
+headerIcon.setAttribute("src", "#");
+
+headerDiv.appendChild(headerIcon);
+closeImageLink.appendChild(closeImage);
+headerDiv.appendChild(closeImageLink);
+windowDiv.appendChild(headerDiv);
+
+var headerText = document.createTextNode("Picture Gallery");
+headerDiv.appendChild(headerText);
+
+closeImageLink.onclick = function () {
+main.removeChild(windowDiv);    
+};
 
 
 };
