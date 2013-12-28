@@ -30,13 +30,27 @@ background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
 width: auto;
 height: 22px;
 padding: 7px 6px 2px 4px;
-color: white;   
+color: white;  
+margin-left: 100px;
+}
+
+.headerIcon
+{
+ transform: scale(0.7);
+    float: left;
+    width: 22px;
+    margin-left: -24px;
+}
+
+.headerDiv a
+{
+    float: right;
 }
 
 .window
 {
 position: relative;
-left: 25%;
+left: 24%;
 top: 15%;
 border-radius: 5px 5px 0px 0px;
 width: 520px;

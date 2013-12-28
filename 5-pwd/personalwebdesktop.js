@@ -33,14 +33,14 @@ var headerDiv = document.createElement("div");
 headerDiv.className = "headerDiv";
 
 var closeImage =  document.createElement("img");
-closeImage.setAttribute("src", "#");
+closeImage.setAttribute("src", "pics/close.png");
 
 var closeImageLink = document.createElement("a");
 closeImageLink.setAttribute("href", "#");
 
 var headerIcon = document.createElement("img");
 headerIcon.className = "headerIcon";
-headerIcon.setAttribute("src", "#");
+headerIcon.setAttribute("src", "pics/iconImage.png");
 
 headerDiv.appendChild(headerIcon);
 closeImageLink.appendChild(closeImage);
@@ -50,8 +50,14 @@ windowDiv.appendChild(headerDiv);
 var headerText = document.createTextNode("Picture Gallery");
 headerDiv.appendChild(headerText);
 
+var bottomDiv = document.createElement("div");
+bottomDiv.className = "bottomDiv";
+
+var contentDiv = document.createElement("div");
+contentDiv.className = "contentDiv";
+
 closeImageLink.onclick = function () {
-main.removeChild(windowDiv);    
+container.removeChild(windowDiv);    
 };
 
 
@@ -61,5 +67,5 @@ main.removeChild(windowDiv);
     
 };
 
-window.onload = PersonalWebDesktop.init;
+window.onload = personalWebDesktop.init;
 
