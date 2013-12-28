@@ -5,6 +5,7 @@ var personalWebDesktop = {
 init: function () {
 
 var icon = document.getElementById("icon");
+// Antalet click på ikonen
 var onclick = 0;
 var div = document.createElement("div");
 div.className = "icon";
@@ -22,7 +23,9 @@ icon.appendChild(div);
 
 a.onclick = function () {
 
+// Efter du tryckt på ikonen så kommer det inte hända något gångerna efter
 onclick++;
+// Om click är större än 1 så kommer det inte hända något
 if (onclick > 1)
 {
 return false;    
@@ -66,7 +69,9 @@ windowDiv.appendChild(contentDiv);
 windowDiv.appendChild(bottomDiv);
 
 closeImageLink.onclick = function () {
-container.removeChild(windowDiv);    
+// Stänger ner fönstret
+container.removeChild(windowDiv);
+// Sätts om till 0 så det kommer gå klicka på ikonen
 onclick = 0;
 };
 
