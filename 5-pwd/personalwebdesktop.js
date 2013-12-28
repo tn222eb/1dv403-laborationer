@@ -5,6 +5,7 @@ var personalWebDesktop = {
 init: function () {
 
 var icon = document.getElementById("icon");
+var onclick = 0;
 var div = document.createElement("div");
 div.className = "icon";
 
@@ -21,6 +22,11 @@ icon.appendChild(div);
 
 a.onclick = function () {
 
+onclick++;
+if (onclick > 1)
+{
+return false;    
+}
 
 var container = document.getElementById("container");
 
@@ -56,8 +62,12 @@ bottomDiv.className = "bottomDiv";
 var contentDiv = document.createElement("div");
 contentDiv.className = "contentDiv";
 
+windowDiv.appendChild(contentDiv);
+windowDiv.appendChild(bottomDiv);
+
 closeImageLink.onclick = function () {
 container.removeChild(windowDiv);    
+onclick = 0;
 };
 
 
