@@ -85,3 +85,10 @@ border-radius: 5px 5px 0px 0px;
 width: 618px;
 height: 310px;
 }
+
+.bottomDiv img
+{
+position: absolute;
+top: 22%;
+left: 1.5%;  
+}

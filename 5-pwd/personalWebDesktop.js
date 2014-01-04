@@ -11,7 +11,7 @@ var div = document.createElement("div");
 div.className = "icon";
 
 var image = document.createElement("img");
-image.setAttribute("src", "pics/iconImage.png");
+image.setAttribute("src", "pics/iconimage.png");
 image.className = "iconImage";
 
 var a = document.createElement("a");
@@ -49,7 +49,7 @@ closeImageLink.setAttribute("href", "#");
 
 var headerIcon = document.createElement("img");
 headerIcon.className = "headerIcon";
-headerIcon.setAttribute("src", "pics/iconImage.png");
+headerIcon.setAttribute("src", "pics/iconimage.png");
 
 headerDiv.appendChild(headerIcon);
 closeImageLink.appendChild(closeImage);
@@ -68,6 +68,10 @@ contentDiv.className = "contentDiv";
 windowDiv.appendChild(contentDiv);
 windowDiv.appendChild(bottomDiv);
 
+var imageLoader = document.createElement("img");
+imageLoader.setAttribute("src", "pics/load.gif");
+bottomDiv.appendChild(imageLoader);
+
 closeImageLink.onclick = function () {
 // Stänger ner fönstret
 container.removeChild(windowDiv);
@@ -75,6 +79,7 @@ container.removeChild(windowDiv);
 onclick = 0;
 };
 
+var url = "http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/"
 
 };
     
