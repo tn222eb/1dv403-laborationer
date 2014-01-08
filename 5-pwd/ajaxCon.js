@@ -22,8 +22,6 @@ xhr.onreadystatechange = function () {
 
 xhr.open("get", url, true);
 
-xhr.setRequestHeader('If-Modified-Since', 'Mon, 01 Sep 2007 00:00:00 GMT');
-
 xhr.send(null);
 }
 

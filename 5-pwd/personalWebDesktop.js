@@ -99,16 +99,66 @@ container.removeChild(windowDiv);
 onclick = 0;
 };
 
-var url = "http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/"
+var url = "http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/";
+
+// Skapar en ny AjaxCon och skicka in url för bilderna och använder en funktion som callback
+new AjaxCon(url, function(data) {
+
+// Genom parse så tolkar jag datan och sparar in den i variabel
+var jsonimgs = JSON.parse(data);
+var node = document.getElementsByTagName("div");
+var height = 0;
+var width = 0;
+
+// Skapa en divtagg för varje bild 
+for (var i = 0; i < jsonimgs.length; i++) {
+var ajaximgDiv = document.createElement("div");
+ajaximgDiv.className = "ajaxImg";
+contentDiv.appendChild(ajaximgDiv);
+
+if (jsonimgs[i].thumbWidth > width) {
+width = jsonimgs[i].thumbWidth;
+}
+if (jsonimgs[i].thumbHeight > height) {
+height = jsonimgs[i].thumbHeight;
+}
+var ajaxImg = document.createElement("img");
+ajaxImg.setAttribute("src", jsonimgs[i].thumbURL);
+
+var ajaxImgLink = document.createElement("a");
+ajaxImgLink.setAttribute("href", "#");
+// Lägger sedan bild i div-taggen
+ajaxImgLink.appendChild(ajaxImg);
+ajaximgDiv.appendChild(ajaxImgLink);
+
+// Gör så alla bilder och länkar som argument när man klickar för att byta bakgrundsbild
+personalWebDesktop.changeBackground(jsonimgs[i].URL, ajaxImgLink);
+}
+
+// Kolla om div-taggen node är av klass ajaxImg vilket den är så sätt höjd och bredd
+for (var j = 0; j < node.length; j++) {
+if (node[j].className === "ajaxImg") {
+node[j].style.height = height + "px";
+node[j].style.width = width + "px";
+}
+}
+
+// Efter ajax-anropet är klart så tas laddningsbilden bort
+bottomDiv.removeChild(imageLoader);
+
+});
+
+
+return false;
 
 };
-    
+
 },
 
 changeBackground: function (backgroundImg, change) {
-    
+// Den bilden man klickas på byts till bakgrundsbilden
 change.onclick = function () {
-document.getElementById("container").style.backgroundImage = "url (pics/" + backgroundImg.fileName + ") ";    
+document.getElementById("container").style.backgroundImage = "url(" + backgroundImg + ")";
 };
 
 }

@@ -16,7 +16,17 @@ background-color: rgb(51, 51, 51);
 {
 float: left;
 transform: scale(0.6);
+-webkit-transform: scale(0.6);
 margin-top: 430px;
+}
+
+.ajaxImg {
+	display: block;
+	float: left;
+	margin: 9px;
+	text-align: center;
+	border: 1px solid rgba(69,72,77,1);
+	border-radius: 1px;
 }
 
 .contentDiv
@@ -24,7 +34,7 @@ margin-top: 430px;
 display: block;
 float: left;
 background-color: rgb(255, 255, 255);
-width: 490px;
+width: 397px;
 height: 280px;
 overflow: scroll;
 overflow-x: hidden;   
@@ -65,6 +75,7 @@ margin-left: 128px;
 
 .headerIcon
 {
+-webkit-transform: scale(0.7);
 transform: scale(0.7);
 float: left;
 width: 22px;
@@ -82,7 +93,7 @@ position: relative;
 left: 13%;
 top: 15%;
 border-radius: 5px 5px 0px 0px;
-width: 618px;
+width: 525px;
 height: 310px;
 }
 
